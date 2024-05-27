@@ -13,12 +13,12 @@ $colors: (
 );
 
 @function color($color) {
-  @return map-get($colors, $color)
+  @return map-get($colors, $color);
 }
 
 @mixin mq($size) {
   @media (min-width: $size) {
-    @content
+    @content;
   }
 }
 
@@ -26,13 +26,17 @@ $colors: (
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Kumbh Sans', sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
 }
 
 main {
   display: grid;
   place-items: center;
-  background-image: linear-gradient(to bottom, color("gradient-top"), color("gradient-bottom"));
+  background-image: linear-gradient(
+    to bottom,
+    color("gradient-top"),
+    color("gradient-bottom")
+  );
   background-repeat: no-repeat;
   min-height: 100vh;
 }
@@ -82,7 +86,7 @@ main {
     }
   }
 
-  // style for accordion items 
+  // style for accordion items
   &__content {
     &-title {
       text-transform: uppercase;
@@ -103,7 +107,7 @@ main {
       color: color("primary-icon") !important;
     }
 
-    &-accordions details p{
+    &-accordions details p {
       color: color("secondary-text");
       padding-top: 1rem;
       padding-right: 1.5rem;
@@ -125,7 +129,7 @@ main {
       aspect-ratio: 1 / 1;
       transition: 200ms ease-in-out;
     }
-    
+
     &-accordions details[open] summary {
       color: color("primary-title");
       font-weight: 700;
@@ -154,40 +158,19 @@ main {
       position: relative;
       display: block;
       width: 50%;
-      // background-image: url("../images/illustration-woman-online-desktop.svg");
-      // background-repeat: no-repeat;
-      // background-position: -5.5rem 45%;
-      // background-size: 40rem;
       background-image: url("../images/bg-pattern-desktop.svg");
       background-size: 63rem;
       background-position: -31rem -15rem;
       background-repeat: no-repeat;
     }
 
-    // for woman illustration img
-    // &__image-dekstop img.woman-img {
-    //   position: absolute;
-    //   top: 5rem;
-    //   left: -5.5rem;
-    //   width: 40rem;
-    // }
-
     &__image-dekstop &__image-dekstop-bg {
-      // background-image: url("../images/bg-pattern-desktop.svg");
-      // background-size: 65rem;
-      // background-position: -31rem -15rem;
-      // background-repeat: no-repeat;
-      // height: 100%;
-
       background-image: url("../images/illustration-woman-online-desktop.svg");
       background-repeat: no-repeat;
       background-position: -5.5rem 5rem;
       background-size: 38rem;
       width: 100%;
       height: 100%;
-      // aspect-ratio: 1 / 1;
-      // top: -15rem;
-      // left: -31rem;
     }
 
     &__image-dekstop img.box-img {
@@ -207,7 +190,6 @@ main {
 
     &__content {
       width: 42.6rem;
-      // margin-left: 2rem;
 
       &-accordions details {
         width: 100%;

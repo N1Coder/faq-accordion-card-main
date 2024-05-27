@@ -22,6 +22,3 @@ for (const accordionItem of accordionItems) {
 
   accordionItem.addEventListener("click", toggleAccordion)
 }
-
-// toggleAccordion(accordionItems)
-// toggleAccordion(accordionTitles)

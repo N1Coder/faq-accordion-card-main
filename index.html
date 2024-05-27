@@ -1,113 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet"> 
-  
-  <title>Frontend Mentor | FAQ Accordion Card</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <link rel="stylesheet" href="css/main.css">
-  <script defer src="js/script.js"></script>
-</head>
-<body>
+    <title>Frontend Mentor | FAQ Accordion Card</title>
 
-  <main>
-    <section class="card">
-      <!-- container for card image -->
-      <div class="card__image-dekstop">
-        <!-- <img class="woman-img" src="images/illustration-woman-online-desktop.svg" alt="Woman illustration"> -->
-        <div class="card__image-dekstop-bg"></div>
-        <img class="box-img" src="images/illustration-box-desktop.svg" alt="Box illustration">
-      </div>
-      
-      <div class="card__image-mobile">
-        <img src="images/illustration-woman-online-mobile.svg" alt="Woman illustration">
-      </div>
-
-      <!-- card content start here -->
-      <div class="card__content">
-        <h2 class="card__content-title"> faq </h2>
-
-        <div class="card__content-accordions">
-
-          <details>
-            <summary>
-              How many team members can I invite?
-            </summary>
-            <p>
-              You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.
-            </p>
-          </details>
-
-          <details open>
-            <summary>
-              What is the maximum file upload size?
-            </summary>
-            <p>
-              No more than 2GB. All files in your account must fit your allotted storage space.
-            </p>
-          </details>
-
-          <details>
-            <summary>
-              How do I reset my password?
-            </summary>
-            <p>
-              Click “Forgot password” from the login page or “Change password” from your profile page. 
-              A reset link will be emailed to you.
-            </p>
-          </details>
-
-          <details>
-            <summary>
-              Can I cancel my subscription?
-            </summary>
-            <p>
-              Yes! Send us a message and we’ll process your request no questions asked.
-            </p>
-          </details>
-
-          <details>
-            <summary>
-              Do you provide additional support?
-            </summary>
-            <p>
-              Chat and email support is available 24/7. Phone lines are open during normal business hours.
-            </p>
-          </details>
+    <link rel="stylesheet" href="css/main.css" />
+    <script defer src="js/script.js"></script>
+  </head>
+  <body>
+    <main>
+      <section class="card">
+        <!-- container for card image -->
+        <div class="card__image-dekstop">
+          <div class="card__image-dekstop-bg"></div>
+          <img
+            class="box-img"
+            src="images/illustration-box-desktop.svg"
+            alt="Box illustration"
+          />
         </div>
 
-      </div>
+        <div class="card__image-mobile">
+          <img
+            src="images/illustration-woman-online-mobile.svg"
+            alt="Woman illustration"
+          />
+        </div>
 
-    </section>
-  </main>
+        <!-- card content start here -->
+        <div class="card__content">
+          <h2 class="card__content-title">faq</h2>
 
-  <!-- How many team members can I invite?
-  You can invite up to 2 additional users on the Free plan. There is no limit on 
-  team members for the Premium plan.
+          <div class="card__content-accordions">
+            <details>
+              <summary>How many team members can I invite?</summary>
+              <p>
+                You can invite up to 2 additional users on the Free plan. There
+                is no limit on team members for the Premium plan.
+              </p>
+            </details>
 
-  What is the maximum file upload size?
-  No more than 2GB. All files in your account must fit your allotted storage space.
+            <details open>
+              <summary>What is the maximum file upload size?</summary>
+              <p>
+                No more than 2GB. All files in your account must fit your
+                allotted storage space.
+              </p>
+            </details>
 
-  How do I reset my password?
-  Click “Forgot password” from the login page or “Change password” from your profile page.
-  A reset link will be emailed to you.
+            <details>
+              <summary>How do I reset my password?</summary>
+              <p>
+                Click “Forgot password” from the login page or “Change password”
+                from your profile page. A reset link will be emailed to you.
+              </p>
+            </details>
 
-  Can I cancel my subscription?
-  Yes! Send us a message and we’ll process your request no questions asked.
+            <details>
+              <summary>Can I cancel my subscription?</summary>
+              <p>
+                Yes! Send us a message and we’ll process your request no
+                questions asked.
+              </p>
+            </details>
 
-  Do you provide additional support?
-  Chat and email support is available 24/7. Phone lines are open during normal business hours. -->
+            <details>
+              <summary>Do you provide additional support?</summary>
+              <p>
+                Chat and email support is available 24/7. Phone lines are open
+                during normal business hours.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
 
-  <!-- <div class="attribution">
+    <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">N1Coder</a>.
   </div> -->
-</body>
+  </body>
 </html>
