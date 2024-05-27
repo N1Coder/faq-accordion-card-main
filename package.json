@@ -1,0 +1,12 @@
+{
+  "name": "faq-accordion-card-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the FAQ accordion card coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "sass -w --style=compressed scss/main.scss:css/main.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,217 @@
+:root {
+  font-size: 62.5%;
+}
+
+$colors: (
+  "primary-title": hsl(238, 29%, 16%),
+  "primary-icon": hsl(14, 88%, 65%),
+  "primary-text": hsl(237, 12%, 33%),
+  "secondary-text": hsl(240, 6%, 50%),
+  "divider-clr": hsl(240, 5%, 91%),
+  "gradient-top": hsl(273, 75%, 66%),
+  "gradient-bottom": hsl(240, 73%, 65%),
+);
+
+@function color($color) {
+  @return map-get($colors, $color)
+}
+
+@mixin mq($size) {
+  @media (min-width: $size) {
+    @content
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+main {
+  display: grid;
+  place-items: center;
+  background-image: linear-gradient(to bottom, color("gradient-top"), color("gradient-bottom"));
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+// mobile layout
+.card {
+  margin-top: 11rem;
+  padding: 2.5rem;
+  padding-top: 0;
+  width: max(90%);
+  background: #fff;
+  border-radius: 2rem;
+  font-size: 1.8rem;
+
+  // card size for tablet device
+  @include mq(700px) {
+    width: max(50%);
+  }
+
+  // hide dekstop img
+  &__image-dekstop {
+    display: none;
+  }
+
+  // style for mobile img illustration
+  &__image-mobile {
+    position: relative;
+    width: 100%;
+    min-height: 12rem;
+    margin-bottom: 1.5rem;
+    background-image: url("../images/bg-pattern-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: 25rem;
+
+    @include mq(1080px) {
+      display: none;
+    }
+
+    img {
+      display: block;
+      position: absolute;
+      top: -11.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 25rem;
+    }
+  }
+
+  // style for accordion items 
+  &__content {
+    &-title {
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 3rem;
+      font-size: clamp(2rem, 5vw, 2.8rem);
+    }
+
+    &-accordions details {
+      font-size: 1.2rem;
+      margin: 1.5rem 0;
+      border-bottom: 1px solid color("divider-clr");
+      padding-bottom: 1.75rem;
+      transition: max-height 200ms ease-in-out;
+    }
+
+    &-accordions details:hover summary {
+      color: color("primary-icon") !important;
+    }
+
+    &-accordions details p{
+      color: color("secondary-text");
+      padding-top: 1rem;
+      padding-right: 1.5rem;
+    }
+
+    &-accordions details summary {
+      position: relative;
+      font-size: 1.3rem;
+      list-style: none;
+      cursor: pointer;
+      transition: 200ms ease-in-out;
+    }
+
+    &-accordions details summary::after {
+      content: url("../images/icon-arrow-down.svg");
+      position: absolute;
+      right: 0;
+      transform-origin: center;
+      aspect-ratio: 1 / 1;
+      transition: 200ms ease-in-out;
+    }
+    
+    &-accordions details[open] summary {
+      color: color("primary-title");
+      font-weight: 700;
+    }
+
+    &-accordions details[open] summary::after {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+// dekstop layout
+@include mq(1080px) {
+  .card {
+    display: flex;
+    // justify-content: space-between;
+    padding: 4rem;
+    padding-top: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+    margin: 0;
+    width: max(60%);
+    // overflow: hidden;
+
+    &__image-dekstop {
+      position: relative;
+      display: block;
+      width: 50%;
+      // background-image: url("../images/illustration-woman-online-desktop.svg");
+      // background-repeat: no-repeat;
+      // background-position: -5.5rem 45%;
+      // background-size: 40rem;
+      background-image: url("../images/bg-pattern-desktop.svg");
+      background-size: 63rem;
+      background-position: -31rem -15rem;
+      background-repeat: no-repeat;
+    }
+
+    // for woman illustration img
+    // &__image-dekstop img.woman-img {
+    //   position: absolute;
+    //   top: 5rem;
+    //   left: -5.5rem;
+    //   width: 40rem;
+    // }
+
+    &__image-dekstop &__image-dekstop-bg {
+      // background-image: url("../images/bg-pattern-desktop.svg");
+      // background-size: 65rem;
+      // background-position: -31rem -15rem;
+      // background-repeat: no-repeat;
+      // height: 100%;
+
+      background-image: url("../images/illustration-woman-online-desktop.svg");
+      background-repeat: no-repeat;
+      background-position: -5.5rem 5rem;
+      background-size: 38rem;
+      width: 100%;
+      height: 100%;
+      // aspect-ratio: 1 / 1;
+      // top: -15rem;
+      // left: -31rem;
+    }
+
+    &__image-dekstop img.box-img {
+      position: absolute;
+      top: 15rem;
+      left: -9rem;
+      width: max(17rem);
+    }
+
+    &__content {
+      margin: 4rem 0;
+    }
+
+    &__content-title {
+      text-align: left;
+    }
+
+    &__content {
+      width: 42.6rem;
+      // margin-left: 2rem;
+
+      &-accordions details {
+        width: 100%;
+      }
+    }
+  }
+}
